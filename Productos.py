@@ -58,6 +58,12 @@ productos = []
 #productos_refrigerados = []
 #productos_congelados = []
 
+def datosGenerales():
+    fecha_caducidad = input("Fecha de caducidad: ")
+    numero_lote = input("Numero de lote: ")
+    peso = input("Peso: ")
+    return fecha_caducidad, numero_lote, peso
+
 def main():
     while True:
         print("\nGestión de Productos Agroalimentarios")
