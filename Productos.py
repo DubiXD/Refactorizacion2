@@ -64,6 +64,14 @@ def datosGenerales():
     peso = input("Peso: ")
     return fecha_caducidad, numero_lote, peso
 
+def mostrar_productos():
+    if not productos:
+        print("No hay productos registrados")
+        return
+    for producto in productos:
+        print(producto)
+        print(f"Coste de envio: {producto.calcular_coste_envio():.2f}€\n")
+
 def main():
     while True:
         print("\nGestión de Productos Agroalimentarios")
@@ -103,12 +111,7 @@ def main():
             print("Producto congelado agregado.")
 
         elif pregunta == "4":
-            print("Productos Frescos:")
-            Frescos
-            print("Productos Refrigerados:")
-            Refrigerados
-            print("Productos Congelados:")
-            Congelados
+            mostrar_productos()
         
         elif pregunta == "5":
             print("Se acabo")
