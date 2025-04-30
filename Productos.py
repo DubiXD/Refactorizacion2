@@ -13,7 +13,7 @@ class Productos():
     def __init__(self, fecha_caducidad, numero_lote, peso, medida):
         self.fecha_caducidad = fecha_caducidad
         self.numero_lote = numero_lote
-        self.peso = peso
+        self.peso = float(peso)
         self.medida = medida
 
     def calcular_coste_envio(self):
